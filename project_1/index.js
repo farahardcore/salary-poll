@@ -18,7 +18,7 @@ for (let i=0; i < 2;i++){
             appData.expenses[a] = b;
         }else{
             console.log("Bad result");
-            i--;
+            break;
         }
 };
 // Используем цикл WHILE
