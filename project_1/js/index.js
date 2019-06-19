@@ -1,13 +1,36 @@
 `use strict`
-let money,time;
-function start() {
+let startCount = document.getElementById("start"),
+    badValue = document.getElementsByClassName("budget-value"),
+    dayBadValue = document.getElementsByClassName("daybudget-value"),
+    levValue = document.getElementsByClassName("level-value"),
+    expValue = document.getElementsByClassName("expenses-value"),
+    optExpValue = document.getElementsByClassName("optionalexpenses-value"),
+    incValue = document.getElementsByClassName("income-value"),
+    monthValue = document.getElementsByClassName("monthsavings-value"),
+    yearValue = document.getElementsByClassName("yearsavings-value");
+    expItem = document.querySelectorAll(".expenses-item"),
+    console.log(expItem);
+    expensesBtn = document.getElementsByTagName('button')[0],
+	optionalExpensesBtn = document.getElementsByTagName('button')[1],
+    countBtn = document.getElementsByTagName('button')[2],
+    optExpInput = document.querySelectorAll(".optionalexpenses-item"),
+    incomeItem = document.querySelector('.choose-income'),
+	checkSavings = document.querySelector('#savings'),
+	sumValue = document.querySelector('.choose-sum'),
+    percentValue = document.querySelector('.choose-percent'),
+    yearValue = document.querySelector('.year-value'),
+    monthValue = document.querySelector('.month-value'),
+    dayValue = document.querySelector('.day-value');
+    var money;
+    var time;
+var goStart = function() {
     money = prompt("You money on this month?", "");
     time = prompt("Enter today Date in format YYYY-MM-DD", "");
     while(isNaN(money)||money == "" || money == null){
         money = prompt("You money on this month?", "");
     }
 }
-start();
+goStart();
 
 const appData = {
     cash : money,
